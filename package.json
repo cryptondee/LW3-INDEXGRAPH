@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "graph": "^0.2.0"
+  }
+}
