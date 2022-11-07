@@ -79,7 +79,8 @@ export default function Home() {
     try {
       const provider = await getProviderOrSinger();
       const randomGame = new Contract(NFT_CONTRACT, abi, provider);
-      const _gameStarted = await randomGame.gmaeStarted();
+      const _gameStarted = await randomGame.gameStarted();
+      const _gameArray = await subGraphQuery(FETCH_CREATED_GAME());
       const _game = _gameArray.games[0];
       let _logs = [];
       if (_gameStarted) {
